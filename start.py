@@ -23,8 +23,8 @@ if __name__ == '__main__':
 
     # get repository list
     repos = get.get_json(
-        'https://api.github.com/users/{0}/repos'.format(username))
-
+        'https://api.github.com/users/{0}/repos?per_page=100'.format(username))
+    
     # update the backup
     if not os.path.exists(backup_folder):
         os.makedirs(backup_folder)
