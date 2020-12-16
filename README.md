@@ -1,3 +1,5 @@
+![LICENSE:undecided](https://img.shields.io/badge/LICENSE-undecided-FD3164.svg?longCache=true)
+
 # GitHubBackup
 GitHubのpublicのリポジトリを毎日指定時間にバックアップする。
 > 使う場合は`cron`とかで。
