@@ -1,6 +1,5 @@
 import json
 import os
-import subprocess
 import shutil
 
 from src import get
@@ -37,11 +36,11 @@ if __name__ == '__main__':
         if name not in all_updated or all_updated[name] != updated_at:
             print("\n>> update", name)
             if not os.path.exists('{0}'.format(name)):
-                subprocess.call('git clone {0}'.format(html_url))   # clone
+                os.system('git clone {0}'.format(html_url))   # clone
             else:
                 os.chdir('{0}'.format(name))
-                subprocess.call('git cehckout .')
-                subprocess.call('git pull')   # pull
+                os.system('git cehckout .')
+                os.system('git pull')   # pull
                 os.chdir('../')
             all_updated[name] = updated_at
     os.chdir(chdir)
