@@ -10,6 +10,7 @@ if __name__ == '__main__':
     # file
     file_setting = './data/setting.json'
     file_updated = './data/updated.json'
+    chdir = os.getcwd()
 
     # load setting.json
     f = open(file_setting, 'r')
@@ -43,7 +44,7 @@ if __name__ == '__main__':
                 subprocess.call('git pull')   # pull
                 os.chdir('../')
             all_updated[name] = updated_at
-    os.chdir('../')
+    os.chdir(chdir)
 
     # save
     with open(file_updated, 'w') as outfile:
