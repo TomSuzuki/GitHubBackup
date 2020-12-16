@@ -24,7 +24,7 @@ if __name__ == '__main__':
     # get repository list
     repos = get.get_json(
         'https://api.github.com/users/{0}/repos?per_page=100'.format(username))
-    
+
     # update the backup
     if not os.path.exists(backup_folder):
         os.makedirs(backup_folder)
@@ -39,7 +39,7 @@ if __name__ == '__main__':
                 os.system('git clone {0}'.format(html_url))   # clone
             else:
                 os.chdir('{0}'.format(name))
-                os.system('git cehckout .')
+                os.system('git checkout .')
                 os.system('git pull')   # pull
                 os.chdir('../')
             all_updated[name] = updated_at
