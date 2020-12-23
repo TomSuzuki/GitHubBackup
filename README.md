@@ -1,4 +1,5 @@
 ![LICENSE:MIT](https://img.shields.io/badge/LICENSE-MIT-497EA8.svg?longCache=true)
+[![codeclimate](https://api.codeclimate.com/v1/badges/9e635f09388c40abf433/maintainability)](https://codeclimate.com/github/TomSuzuki/GitHubBackup/maintainability)
 
 # GitHubBackup
 GitHubのpublicのリポジトリを毎日指定時間にバックアップする。フォークとか使うのはご自由に（何かあっても知らんけど）。
