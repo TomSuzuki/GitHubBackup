@@ -12,14 +12,14 @@ if __name__ == '__main__':
     chdir = os.getcwd()
 
     # load setting.json
-    f = open(file_setting, 'r')
-    setting = json.load(f)
-    username = setting["username"]
-    backup_folder = setting["backup_folder"]
+    with open(file_setting, 'r') as f:
+        setting = json.load(f)
+        username = setting["username"]
+        backup_folder = setting["backup_folder"]
 
     # load updated.json
-    f = open(file_updated, 'r')
-    all_updated = json.load(f)
+    with open(file_updated, 'r') as f:
+        all_updated = json.load(f)
 
     # get repository list
     repos = get.get_json(
