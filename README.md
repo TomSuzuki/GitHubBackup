@@ -12,9 +12,9 @@ GitHubのpublicのリポジトリを毎日指定時間にバックアップす�
 - cron（自動化するなら）
 
 ## 初期設定
-1. `data`フォルダを作成。
+1. `start.py`と同じ階層に`data`ディレクトリを作成。
 1. `data/updated.json`を作成し、中に`{}`を入れる。
-1. `setting.json`を作成し以下のように設定する。
+1. `data/setting.json`を作成し以下のように設定する。
 ```json
 {
   "username": "[GitHubのアカウント名]",
